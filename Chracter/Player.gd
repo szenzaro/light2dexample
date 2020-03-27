@@ -22,4 +22,9 @@ func update_movement()->void:
 	motion.x = lerp(motion.x , 0, FRICTION)
 	motion.y = lerp(motion.y , 0, FRICTION)
 	
+	
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("torchtoggle"):
+		$Torch.enabled = !$Torch.enabled 
+		
 
